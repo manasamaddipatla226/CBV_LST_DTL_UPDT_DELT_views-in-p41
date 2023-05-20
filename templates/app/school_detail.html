@@ -1,0 +1,23 @@
+{% extends 'app/dummy.html' %}
+{% load static %}
+
+{% block title %}
+    <title>details of school</title>
+    <link rel="stylesheet" href="{% static 'css/c1.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<center>
+    <h1>Details of school {{school.name}} object</h1>
+    <h1>Name of school is {{school.name}}</h1>
+
+    <h1>principal of school is {{school.principal}}</h1>
+    <h1>location of school is {{school.location}}</h1>
+    <h1>Details of student are</h1>
+{% for i in school.students.all %}
+    <h5>name of student is {{i.sname}}</h5>
+    <h5>age of student is {{i.sage}}</h5>
+{% endfor  %}
+</center>
+
+{% endblock %}

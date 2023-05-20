@@ -8,16 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 {% block title %}
-    <title>Hello, world!</title>
+    <title>Hello world!</title>
 {% endblock %}
   </head>
   <body>
-    <center>
+   
 
     <nav class="nav" style="font-size: 30px; color:blue">
         <a href="{% url 'admin:index' %}" class="nav-link">Admin</a>
         <a href="{% url 'home' %}" class="nav-link">Home</a>
         <a href="{% url 'SchoolList' %}" class="nav-link">list of schools</a>
+        <a href="{% url 'SchoolCreate' %}" class="nav-link">SchoolCreate</a>
 
     </nav>
 
@@ -35,6 +36,5 @@
     -->
 {% block body_block %}
 {% endblock %}
-</center>
   </body>
 </html>

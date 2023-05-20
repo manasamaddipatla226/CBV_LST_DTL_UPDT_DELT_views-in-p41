@@ -1,0 +1,24 @@
+
+{% extends 'app/dummy.html' %}
+{% load static %}
+
+{% block title %}
+    <title>form page</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+    
+    <h1 style="color:aqua">fill the form to insert data</h1>
+    <form method="POST">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+
+
+    <input type="submit" value="create" class="btn btn-success">
+    </form>
+</center>
+
+{% endblock %}
