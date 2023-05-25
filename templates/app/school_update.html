@@ -1,0 +1,33 @@
+
+{% extends 'app/dummy.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Update page</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+{% if form.instance.pk %}
+    
+    <h1 style="color:aqua">fill the update form</h1>
+{% else %}
+    <h1>fill the create form </h1>
+
+{% endif %}
+    <form method="POST">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+
+{% if form.instance.pk %}
+    <input type="submit" value="update" class="btn btn-secondary">
+{% else %}
+    
+    <input type="submit" value="create" class="btn btn-success">
+{% endif %}
+</form>
+</center>
+
+{% endblock %}

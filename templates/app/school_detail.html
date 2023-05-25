@@ -18,6 +18,11 @@
     <h5>name of student is {{i.sname}}</h5>
     <h5>age of student is {{i.sage}}</h5>
 {% endfor  %}
+
+
+
+<h6><a href="{% url 'SchoolUpdate' pk=school.pk %}">update</a></h6>
+<h6><a href="{% url 'SchoolDelete' pk=school.pk %}">Delete</a></h6>
 </center>
 
 {% endblock %}
